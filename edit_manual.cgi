@@ -12,7 +12,21 @@ my $catalina_home = get_catalina_home();
 			"$catalina_home/conf/context.xml",
 			"$catalina_home/conf/server.xml",
 			"$catalina_home/conf/tomcat-users.xml",
+			"$catalina_home/conf/catalina.properties",
+			"$catalina_home/conf/Catalina/localhost/host-manager.xml",
+			"$catalina_home/conf/Catalina/localhost/manager.xml",
+			"$catalina_home/bin/catalina.sh",
+			"$catalina_home/bin/ciphers.sh",
+			"$catalina_home/bin/configtest.sh",
+			"$catalina_home/bin/daemon.sh",
+			"$catalina_home/bin/digest.sh",
+			"$catalina_home/bin/setclasspath.sh",
+			"$catalina_home/bin/shutdown.sh",
+			"$catalina_home/bin/startup.sh",
+			"$catalina_home/bin/tool-wrapper.sh",
+			"$catalina_home/bin/version.sh",
 			"$catalina_home/conf/web.xml");
+
 $in{'file'} ||= $files[0];
 &indexof($in{'file'}, @files) >= 0 || &error($text{'manual_efile'});
 
